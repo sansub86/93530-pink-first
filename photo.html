@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header>
+      <div class="mobile-menu">
+        <div class="logo">
+          <img src="http://placehold.it/75x22">
+        </div>
+        <button class="mobile-menu__close" title="Закрыть">Закрыть</button>
+        <ul class="mobile-menu__items">
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">Фотографии</a>
+          </li>
+          <li>
+            <a href="#">Конкурс</a>
+          </li>
+          <li>
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="top-menu">
+        <div class="logo">
+          <img src="http://placehold.it/75x22">
+        </div>
+        <div class="top-menu__menu-burger">
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1 class="photo-header">Фотографии пользователей</h1>
+      <h2 class="photo-header2">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+      <section class="photo">
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Анна</p>
+              <p class="photo__time">(5 минут назад)</p>
+            </div>
+            <p class="photo__text-commit">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы</p>
+            <p class="photo__like">Нравится: 215</p>
+          </div>
+        </div>
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Левон</p>
+              <p class="photo__time">(5 минут назад)</p>
+            </div>
+            <p class="photo__text-commit">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="photo__like">Нравится: 356</p>
+          </div>
+        </div>
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Антон</p>
+              <p class="photo__time">(12 часов назад)</p>
+            </div>
+            <p class="photo__text-commit">Соседи будут рады!</p>
+            <p class="photo__like">Нравится: 666</p>
+          </div>
+        </div>
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Борис</p>
+              <p class="photo__time">(20 часов назад)</p>
+            </div>
+            <p class="photo__text-commit">Здесь могла быть ваша цитата о высоком и вечном</p>
+            <p class="photo__like">Нравится: 215</p>
+          </div>
+        </div>
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Сергей</p>
+              <p class="photo__time">(25 часов назад)</p>
+            </div>
+            <p class="photo__text-commit">Самая кубанская в мире!</p>
+            <p class="photo__like">Нравится: 4</p>
+          </div>
+        </div>
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Максим</p>
+              <p class="photo__time">(40 часов назад)</p>
+            </div>
+            <p class="photo__text-commit">Где снег-то?</p>
+            <p class="photo__like">Нравится: 150</p>
+          </div>
+        </div>
+        <div class="photo__item">
+          <img src="http://placehold.it/280x180">
+          <div class="photo__commit">
+            <div class="photo__about-user">
+              <p class="photo__user-name">Надежда</p>
+              <p class="photo__time">(45 часов назад)</p>
+            </div>
+            <p class="photo__text-commit">Всем GM и взаимные лайки!</p>
+            <p class="photo__like">Нравится: 2560</p>
+          </div>
+        </div>
+      </section>
+      <h2 class="photo-header2">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+      <div class="upload-image">
+        <img src="http://placehold.it/280x347">
+        <div class="upload-image__filters">
+          <a class="upload-image__filters upload-image_crop" href="#">Обрезать</a>
+          <a class="upload-image__filters upload-image_fill" href="#">Заливка</a>
+          <a class="upload-image__filters upload-image_contrast" href="#">Контраст</a>
+        </div>
+        <div class="upload-image__scale">
+          <div class="upload-image__scale-image"></div>
+          <div class="upload-image__scale-image-point"></div>
+        </div>
+        <form class="upload-image__form" action="#" method="post">
+          <input class="upload-image__btn upload-image__btn_active" type="submit" name="btn-upload" value="Запостить">
+          <input class="upload-image__btn upload-image__btn_disabled" type="submit" name="btn-cancel" value="Отмена">
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-logo">
+        <img src="http://placehold.it/147x40">
+      </div>
+      <div class="social">
+        <a class="social__btn social__btn_twitter" href="#">twitter</a>
+        <a class="social__btn social__btn_facebook" href="#">facebook</a>
+        <a class="social__btn social__btn_youtube" href="#">youtube</a>
+      </div>
+      <div class="footer-copyright">
+        <p>Разработано</p>
+        <a class="footer-copyright__academy-logo" href="https://htmlacademy.ru">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
