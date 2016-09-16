@@ -7,10 +7,8 @@
   <body>
     <header class="main-header">
       <div class="main-menu">
-        <div class="logo">
-          <img src="http://placehold.it/75x22">
-        </div>
-        <button class="main-menu__close" title="Закрыть">Закрыть</button>
+        <a class="logo" href="#">pink</a>
+        <button class="main-menu__switch" title="Закрыть">Закрыть</button>
         <ul class="main-menu__items">
           <li>
             <a href="#">Главная</a>
@@ -113,17 +111,17 @@
       <div class="upload-image">
         <img src="http://placehold.it/280x347">
         <div class="upload-image__filters">
-          <a class="upload-image__filters upload-image_crop" href="#">Обрезать</a>
-          <a class="upload-image__filters upload-image_fill" href="#">Заливка</a>
-          <a class="upload-image__filters upload-image_contrast" href="#">Контраст</a>
+          <a class="upload-image__filters upload-image--crop" href="#">Обрезать</a>
+          <a class="upload-image__filters upload-image--fill" href="#">Заливка</a>
+          <a class="upload-image__filters upload-image--contrast" href="#">Контраст</a>
         </div>
         <div class="upload-image__scale">
           <div class="upload-image__scale-image"></div>
           <div class="upload-image__scale-image-point"></div>
         </div>
         <form class="upload-image__form" action="#" method="post">
-          <input class="upload-image__btn upload-image__btn_active" type="submit" name="btn-upload" value="Запостить">
-          <input class="upload-image__btn upload-image__btn_disabled" type="submit" name="btn-cancel" value="Отмена">
+          <input class="upload-image__btn upload-image__btn--active" type="submit" name="btn-upload" value="Запостить">
+          <button class="upload-image__btn upload-image__btn--disabled">Отмена</button>
         </form>
       </div>
     </main>
@@ -132,9 +130,9 @@
         <img src="http://placehold.it/147x40">
       </div>
       <div class="social">
-        <a class="social__btn social__btn_twitter" href="#">twitter</a>
-        <a class="social__btn social__btn_facebook" href="#">facebook</a>
-        <a class="social__btn social__btn_youtube" href="#">youtube</a>
+        <a class="social__btn social__btn--twitter" href="#">twitter</a>
+        <a class="social__btn social__btn--facebook" href="#">facebook</a>
+        <a class="social__btn social__btn--youtube" href="#">youtube</a>
       </div>
       <div class="footer-copyright">
         <p>Разработано</p>
