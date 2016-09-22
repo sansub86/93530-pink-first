@@ -1,0 +1,52 @@
+.intro {
+  background: #1d2631;
+  &__image {
+    height: 395px;
+    background: url('../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
+                url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
+    background-size: auto, cover;
+  }
+  &__download {
+    display: block;
+    height: 55px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 27px 20px;
+    padding: 15px 0;
+    border: 3px solid #ffffff;
+    border-radius: 55px;
+    box-sizing: border-box;
+  }
+  &__intro-wrapper {
+    margin: 0 57px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__intro-logo {
+    width: 60px;
+    height: 60px;
+    }
+  &__intro-logo--apple {
+    background: url('../img/logo-apple.svg') no-repeat 50% 50%;
+  }
+  &__intro-logo--android {
+    background: url('../img/logo-android.svg') no-repeat 50% 50%;
+  }
+  &__intro-logo--windows {
+    background: url('/img/logo-microsoft.svg') no-repeat 50% 50%;
+  }
+  &__message {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 45px;
+    margin: 0;
+  }
+}

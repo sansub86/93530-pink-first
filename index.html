@@ -3,91 +3,133 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
+      <nav class="main-nav">
+        <a class="logo" href="#"></a>
+        <button class="main-nav__switch" title="Закрыть"></button>
+      </nav>
       <div class="main-menu">
-        <a class="logo" href="#">pink</a>
-        <button class="main-menu__switch" title="Закрыть">Закрыть</button>
         <ul class="main-menu__items">
           <li>
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li>
-            <a href="#">Фотографии</a>
+            <a href="photo.html">Фотографии</a>
           </li>
           <li>
-            <a href="#">Конкурс</a>
+            <a href="form.html">Конкурс</a>
           </li>
           <li>
-            <a href="#">HTML Academy</a>
+            <a href="http://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </div>
     </header>
-    <main>
+    <main class="page-main">
       <div class="intro">
-        <a class="intro__download" title="Скачать">Скачать приложение</a>
-        <div class="intro__intro-logo">
+        <div class="intro__image"></div>
+        <a class="intro__download" href="#">Скачать приложение</a>
+        <div class="intro__intro-wrapper">
           <div class="intro__intro-logo intro__intro-logo--apple"></div>
-          <div class="intro__intro-logo intro__intro-logo--apple"></div>
-          <div class="intro__intro-logo intro__intro-logo--apple"></div>
+          <div class="intro__intro-logo intro__intro-logo--android"></div>
+          <div class="intro__intro-logo intro__intro-logo--windows"></div>
         </div>
         <p class="intro__message">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
       </div>
       <div class="information">
-        <h2 class="information__h2">Устали от серости мегаполиса?</h2>
-        <h2 class="information__h2">Нам есть, что вам  предложить!</h2>
-        <h3 class="information__h3">Поднимает настроение</h3>
-        <p class="information__item">Поднимает настроение  Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        <h3 class="information__h3">Меняет мир вокруг</h3>
-        <p class="information__item">Меняет мир вокруг  Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        <h3 class="information__h3">Заводит новых друзей</h3>
-        <p class="information__item">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-        <img src="http://placehold.it/157x320">
+        <div class="information__header">
+          <h2 class="information__h2">Устали от серости мегаполиса?</h2>
+          <h2 class="information__h2">Нам есть, что вам  предложить!</h2>
+        </div>
+        <div class="information__features">
+          <div class="information__image information__image--item1"></div>
+          <h3 class="information__h3">Поднимает настроение</h3>
+          <p class="information__item">Поднимает настроение  Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <div class="information__image information__image--item2"></div>
+          <h3 class="information__h3">Меняет мир вокруг</h3>
+          <p class="information__item">Меняет мир вокруг  Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <div class="information__image information__image--item3"></div>
+          <h3 class="information__h3">Заводит новых друзей</h3>
+          <p class="information__item">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
       </div>
       <div class="review">
-        <h3 class="review__h3">Николай Петров</h3>
-        <p class="review__item">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
-        <input type="radio" id="btn-1" name="toggle" checked>
-        <input type="radio" id="btn-2" name="toggle">
-        <input type="radio" id="btn-3" name="toggle">
-        <div class="slider-controls">
-          <label for="btn-1">&bull;</label>
-          <label for="btn-2">&bull;</label>
-          <label for="btn-3">&bull;</label>
-        </div>
-        <div class="price">
-          <div class="price__logo">
-            <h2 class="price__h2">Стандарт</h2>
-            <p class="price__item">3,99 USD</p>
-            <table class="price__list">
-              <tr>
-                <td>Розовый фильтр</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Смайлики</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Комментарии</td>
-                <td></td>
-              </tr>
-            <table>
+        <div class="slider">
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <input type="radio" id="btn-3" name="toggle">
+          <div class="slider__inner">
+            <div class="slider__slides">
+              <div class="review__slide1">
+                <h3 class="review__h3">Николай Петров</h3>
+                <p class="review__about">25 лет, водитель трамвая</p>
+                <p class="review__item">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+              </div>
+              <div class="review__slide2">
+                <h3 class="review__h3">Василий Чапаев</h3>
+                <p class="review__about">Красный командир</p>
+                <p class="review__item">"Это просто праздник какой-то!"</p>
+              </div>
+              <div class="review__slide3">
+                <h3 class="review__h3">Иван Петров</h3>
+                <p class="review__about">Неизвестный</p>
+                <p class="review__item">"Мы не пашем, не сеим, не стрим! Мы гордимся общественным строем!"</p>
+              </div>
+            </div>
           </div>
-          <input type="radio" id="btn-4" name="toggle-2">
-          <input type="radio" id="btn-5" name="toggle-2"checked>
-          <input type="radio" id="btn-6" name="toggle-2">
-          <div class="slider-controls">
-            <label for="btn-4">&bull;</label>
-            <label for="btn-5">&bull;</label>
-            <label for="btn-6">&bull;</label>
+          <div class="slider__controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
           </div>
         </div>
       </div>
+        <div class="price">
+          <div class="slider">
+            <input type="radio" id="btn-4" name="toggle-2">
+            <input type="radio" id="btn-5" name="toggle-2"checked>
+            <input type="radio" id="btn-6" name="toggle-2">
+            <div class="slider__inner">
+              <div class="slider__slides">
+                  <table class="price__list">
+                    <tr>
+                      <th><span>База</span> 1,99 USD</th>
+                      <th><span>Стандарт</span> 3,99 USD</th>
+                      <th><span>Анлим</span> 9,99 USD</th>
+                    </tr>
+                    <tr>
+                      <td>Розовый фильтр</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Смайлики</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Комментарии</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="slider__controls">
+                <label for="btn-4"></label>
+                <label for="btn-5"></label>
+                <label for="btn-6"></label>
+              </div>
+          </div>
+        </div>
       <div class="feedback">
-        <h2 class="feedback__h2">Остались вопросы? Свяжитесь с нами!</h2>
+        <h2 class="feedback__h2">Остались вопросы?<br>Свяжитесь с нами!</h2>
         <h3 class="feedback__h3">Звоните:</h3>
         <p class="feedback__item">+7 (812) 555-66-66</p>
         <h3 class="feedback__h3">Пишите:</h3>
@@ -95,9 +137,7 @@
         <h3 class="feedback__h3">Приезжайте в гости:</h3>
         <p class="feedback__item">ул. Большая Конюшенная, 19/8</p>
       </div>
-      <div class="content-map">
-        <img src="http://placehold.it/320x123">
-      </div>
+      <div class="content-map"></div>
     </main>
   </body>
 </html>
