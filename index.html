@@ -9,7 +9,7 @@
     <header class="main-header">
       <nav class="main-nav">
         <a class="logo" href="#"></a>
-        <button class="main-nav__switch" title="Закрыть"></button>
+        <button class="main-nav__switch main-nav__switch--burger" title="Закрыть"></button>
       </nav>
       <div class="main-menu">
         <ul class="main-menu__items">
@@ -31,23 +31,26 @@
     <main class="page-main">
       <div class="intro">
         <div class="intro__image"></div>
-        <a class="intro__download" href="#">Скачать приложение</a>
-        <div class="intro__intro-wrapper">
-          <div class="intro__intro-logo intro__intro-logo--apple"></div>
-          <div class="intro__intro-logo intro__intro-logo--android"></div>
-          <div class="intro__intro-logo intro__intro-logo--windows"></div>
+        <div class="intro__download-block">
+          <p class="intro__header">Взгляните<br> на жизнь иначе!<p>
+          <a class="intro__download" href="#">Скачать приложение</a>
+          <div class="intro__intro-wrapper">
+            <div class="intro__intro-logo intro__intro-logo--apple"></div>
+            <div class="intro__intro-logo intro__intro-logo--android"></div>
+            <div class="intro__intro-logo intro__intro-logo--windows"></div>
+          </div>
+          <p class="intro__message">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
         </div>
-        <p class="intro__message">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
       </div>
       <div class="information">
         <div class="information__header">
-          <h2 class="information__h2">Устали от серости мегаполиса?</h2>
+          <h2 class="information__h2">Устали от серости мегаполиса?
           <h2 class="information__h2">Нам есть, что вам  предложить!</h2>
         </div>
         <div class="information__features">
           <div class="information__image information__image--item1"></div>
           <h3 class="information__h3">Поднимает настроение</h3>
-          <p class="information__item">Поднимает настроение  Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <p class="information__item">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           <div class="information__image information__image--item2"></div>
           <h3 class="information__h3">Меняет мир вокруг</h3>
           <p class="information__item">Меняет мир вокруг  Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
@@ -55,6 +58,11 @@
           <h3 class="information__h3">Заводит новых друзей</h3>
           <p class="information__item">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
+      </div>
+      <div class="diagram">
+        <h2 class="diagram__h2">Эффект на 24 часа!</h2>
+        <p class="diagram__item">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a class="diagram__link" href="#">Узнать больше об исследовании</a>
       </div>
       <div class="review">
         <div class="slider">
@@ -130,12 +138,20 @@
         </div>
       <div class="feedback">
         <h2 class="feedback__h2">Остались вопросы?<br>Свяжитесь с нами!</h2>
-        <h3 class="feedback__h3">Звоните:</h3>
-        <p class="feedback__item">+7 (812) 555-66-66</p>
-        <h3 class="feedback__h3">Пишите:</h3>
-        <a class="feedback__item" href="#">mail@htmlacademy.ru</a>
-        <h3 class="feedback__h3">Приезжайте в гости:</h3>
-        <p class="feedback__item">ул. Большая Конюшенная, 19/8</p>
+        <div class="feedback__wrap-items">
+          <div class="feedback__item1">
+            <h3 class="feedback__h3">Звоните:</h3>
+            <p class="feedback__item">+7 (812) 555-66-66</p>
+          </div>
+          <div class="feedback__item2">
+            <h3 class="feedback__h3">Пишите:</h3>
+            <a class="feedback__item" href="#">mail@htmlacademy.ru</a>
+          </div>
+          <div class="feedback__item3">
+            <h3 class="feedback__h3">Приезжайте в гости:</h3>
+            <p class="feedback__item">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div>
       </div>
       <div class="content-map"></div>
     </main>

@@ -20,3 +20,27 @@
     width:280px;
   }
 }
+@media @tablet-widths {
+  .review {
+    &__slide1, &__slide2, &__slide3 {
+      width:620px;
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+    &__h3 {
+
+    }
+    &__about {
+      display: block;
+      font-family: "Open Sans Regular", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+      order: -1;
+    }
+    &__item {
+    }
+  }
+}

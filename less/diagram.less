@@ -1,0 +1,34 @@
+.diagram {
+  display: none;
+}
+@media @tablet-widths {
+  .diagram {
+    display: block;
+    margin-left: 50%;
+    margin-top: 100px;
+    margin-bottom: 130px;
+    &__h2 {
+      font-family: "Open Sans Bold", Arial, sans-serif;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 17px;
+    }
+    &__item {
+      font-family: "Open Sans Regular", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    &__link {
+      font-family: "Open Sans Regular", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      color: #d22856;
+    }
+    &::before {
+      content: '';
+      display: block;
+      background: url('../img/')
+    }
+  }
+}

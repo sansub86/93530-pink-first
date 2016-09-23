@@ -1,5 +1,4 @@
 .feedback {
-  height: 450px;
   text-align: center;
   padding-top: 50px;
   &__h2 {
@@ -20,4 +19,23 @@
 }
 .feedback a {
   text-decoration: none;
+}
+@media @tablet-widths {
+  .feedback {
+    &__h2 {
+      font-size: 40px;
+      line-height: 58px;
+    }
+    &__wrap-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item1, &__item2, &__item3 {
+      margin: 0 45px;
+    }
+    &__item3 {
+      width:220px;
+    }
+  }
 }
