@@ -3,6 +3,9 @@
     overflow: hidden;
     width: 280px;
     margin: 0 auto;
+    &--table {
+      width: 280px;
+    }
   }
   &__slides {
     display: flex;
@@ -38,6 +41,15 @@
     transform: translate(-280px);
 }
 #btn-3:checked ~ .slider__inner .slider__slides {
+    transform: translate(-560px);
+}
+#btn-4:checked ~ .slider__inner .slider__slides {
+    transform: translate(0);
+}
+#btn-5:checked ~ .slider__inner .slider__slides {
+    transform: translate(-280px);
+}
+#btn-6:checked ~ .slider__inner .slider__slides {
     transform: translate(-560px);
 }
 @media @tablet-widths {
