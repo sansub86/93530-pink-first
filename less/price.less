@@ -54,9 +54,30 @@
 .price input[type=radio] {
   display: none;
 }
-#btn-4:checked ~ .slider__controls label[for="btn-4"],
-#btn-5:checked ~ .slider__controls label[for="btn-5"],
-#btn-6:checked ~ .slider__controls label[for="btn-6"] {
-    background-color: transparent;
-    box-shadow:0 0 0 3px #79828b;
+
+@media @tablet-widths {
+  .price {
+    &__list {
+      width: 620px;
+    }
+    &__list th:first-child, &__list td:first-child {
+      display: block;
+    }
+    &__filters {
+      display: none;
+    }
+    &__list td {
+      width: 152px;
+      text-transform: none;
+      text-align: center;
+      vertical-align: middle;
+    }
+    &__list th {
+      width: 152px;
+
+    }
+    &__list th:first-child {
+      background: none;
+    }
+  }
 }
