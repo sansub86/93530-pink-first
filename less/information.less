@@ -74,3 +74,45 @@
     }
   }
 }
+@media @desktop-widths {
+  .information {
+    &__h3 {
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+    &__item {
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      margin: 0;
+    }
+    &__features {
+      display: flex;
+      padding-left: 0;
+      justify-content: space-between;
+      padding: 0 130px;
+    }
+    &__wrapper {
+      outline: 1px solid red;
+      width: 260px;
+    }
+    &__image {
+      &--item1, &--item2 {
+        display: block;
+      }
+      &--item1 {
+          background: url('../img/iphone-screen-mobile@1x.png') no-repeat 50% 0;
+      }
+      &--item2 {
+          background: url('../img/iphone-screen-mobile@1x.png') no-repeat 50% 0;
+      }
+      &--item3 {
+        position: relative;
+        transform: none;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

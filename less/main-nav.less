@@ -4,15 +4,28 @@
   border-bottom: 1px solid black;
   padding-top: 22px;
   position: relative;
+  &--opacity{
+    background-color: rgba(40, 54, 69, 0.7);
+    margin-bottom: -66px;
+    }
   &__switch {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    width: 25px;
-    height: 25px;
-    border: none;
     cursor: pointer;
-    background: url('../img/icon-menu-cross.svg') no-repeat;
+    border: none;
+    &--cross {
+      top: 20px;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+      background: url('../img/icon-menu-cross.svg') no-repeat;
+    }
+    &--burger {
+      background: url('../img/icon-menu-burger.svg') no-repeat;
+      top: 21px;
+      right: 20px;
+      width: 50px;
+      height: 25px;
+    }
   }
 }
 @media @tablet-widths {
@@ -28,9 +41,6 @@
       right: 40px;
       width: 50px;
       height: 25px;
-      &--burger {
-        background: url('../img/icon-menu-burger.svg') no-repeat;
-      }
     }
   }
 }

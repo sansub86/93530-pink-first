@@ -78,4 +78,27 @@
     #btn-5:checked ~ .slider__inner .slider__slides {
         transform: translate(0px);
     }
+    #btn-6:checked ~ .slider__inner .slider__slides {
+        transform: translate(0px);
+    }
 }
+@media @desktop-widths {
+    .slider {
+      &__inner {
+        width: 820px;
+        margin: 0 auto;
+        &--table {
+          width: 920px;
+        }
+      }
+    }
+    #btn-1:checked ~ .slider__inner .slider__slides {
+        transform: translate(0);
+    }
+    #btn-2:checked ~ .slider__inner .slider__slides {
+        transform: translate(-820px);
+    }
+    #btn-3:checked ~ .slider__inner .slider__slides {
+        transform: translate(-1640px);
+    }
+  }

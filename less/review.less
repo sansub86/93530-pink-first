@@ -29,9 +29,7 @@
       flex-direction: column-reverse;
       justify-content: flex-end;
     }
-    &__h3 {
 
-    }
     &__about {
       display: block;
       font-family: "Open Sans Regular", Arial, sans-serif;
@@ -41,6 +39,25 @@
       order: -1;
     }
     &__item {
+    }
+  }
+}
+@media @desktop-widths {
+  .review {
+    &__slide1, &__slide2, &__slide3 {
+      width:820px;
+    }
+    &__h3 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &__about {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    &__item {
+      font-size: 18px;
+      line-height: 30px;
     }
   }
 }

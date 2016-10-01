@@ -14,6 +14,7 @@
     font-family: "Open Sans Light", Arial, sans-serif;
     font-size: 24px;
     line-height: 30px;
+    padding: 0;
   }
   &__list td {
     border: 2px solid #e5e5e5;
@@ -25,7 +26,8 @@
     line-height: 30px;
     text-transform: uppercase;
     color: #283645;
-    padding-left: 22px;
+    padding: 0 0 0 22px;
+    box-sizing: border-box;
     }
     &__icon {
       width: 31px;
@@ -58,26 +60,42 @@
 @media @tablet-widths {
   .price {
     &__list {
-      width: 620px;
     }
     &__list th:first-child, &__list td:first-child {
-      display: block;
+      display: table-cell;
     }
     &__filters {
       display: none;
     }
     &__list td {
-      width: 152px;
+      width: 153px;
       text-transform: none;
-      text-align: center;
       vertical-align: middle;
+      font-size: 18px;
+      line-height: 24px;
     }
     &__list th {
-      width: 152px;
+      width: 153px;
 
     }
     &__list th:first-child {
       background: none;
+    }
+    &__icon {
+      left: 60px;
+    }
+  }
+}
+@media @desktop-widths {
+  .price {
+    &__list td {
+      width: 234px;
+    }
+    &__list th {
+      width: 234px;
+    }
+    &__icon {
+      left: 102px;
     }
   }
 }
