@@ -1,13 +1,12 @@
   .social {
     &__btn {
-      display: block;
       display: inline-block;
       margin: 0 6px;
       font-size: 0;
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      box-shadow:0 0 0 3px #e9ebec;
+      box-shadow:0 0 0 3px grey;
       &--twitter {
         background: url('../img/icon-twitter.svg') no-repeat 50% 50%;
       }
@@ -28,6 +27,8 @@
       font-size: 14px;
       line-height: 18px;
       color: #000000;
+      padding-top: 10px;
+      padding-right: 10px;
     }
     &__academy-logo {
       display: inline-block;
@@ -37,3 +38,8 @@
       font-size: 0;
     }
   }
+@media @tablet-widths {
+  .social {
+    margin-bottom: 0;
+  }
+}

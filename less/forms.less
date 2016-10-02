@@ -4,6 +4,7 @@
     height: 237px;
     width: 100%;
     background: url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
+    background-size: cover;
   }
   &__h1 {
     font-family: "Open Sans Light", Arial, sans-serif;
@@ -23,6 +24,9 @@
     text-align: center;
     margin: 0 20px;
   }
+  &__h2 span {
+    display: none;
+  }
   &__textfield-header {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
@@ -32,10 +36,20 @@
     &--center {
       text-align: center;
     }
+    &--contacts {
+      display: none;
+    }
+    &--normal {
+      display: none;
+    }
   }
   &__textfield {
-    position: relative;
     margin: 0 20px;
+  }
+
+  &__input-item {
+    width:100%;
+    position: relative;
   }
   &__input-text {
     width: 100%;
@@ -47,8 +61,8 @@
     }
   &__label {
     position: absolute;
-    left:25px;
-    top:57px;
+    left:23px;
+    top:25px;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 30px;
@@ -57,8 +71,10 @@
     display: none;
   }
   &__wrap {
-    background-color: #f2f2f2;
     padding: 0 20px;
+    &--grey {
+      background-color: #f2f2f2;
+    }
   }
   &__item {
     position: relative;
@@ -119,13 +135,10 @@
   }
   &__commit {
     margin: 0 20px;
-    position: relative;
-    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column-reverse;
   }
   &__commit label {
-    position: absolute;
-    top: 10px;
-    left: 15px;
 
   }
   &__textarea {
@@ -135,8 +148,13 @@
     border-radius: 3px;
     margin: 0 auto;
     display: block;
-    width: 100%;
     margin-bottom: 47px;
+  }
+  &__wrap-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
   &__btn-send {
     width: 274px;
@@ -153,15 +171,160 @@
     line-height: 30px;
     color: #ffffff;
     margin-bottom: 40px;
-  }
+}
   &__required-fields {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     line-height: 30px;
-    text-align: center;
+    display: block;
   }
   &__required-fields span {
     color: #d22856;
+  }
+}
+@media @tablet-widths {
+  .forms {
+    &__competition {
+      height: 440px;
+    }
+    &__h1 {
+      display: block;
+      margin: 0 100px;
+      font-size: 50px;
+      line-height: 60px;
+      padding: 190px 0 0 0;
+    }
+    &__h2 {
+      font-size: 18px;
+      line-height: 30px;
+      padding-top: 95px;
+      padding-bottom: 70px;
+      margin: 0 100px;
+    }
+    &__h2 span {
+      display: inline;
+    }
+    &__textfield {
+      margin: 0 40px;
+      display: flex;
+      align-items: center;
+      &--bottom {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+    &__textfield-header {
+      margin-right: 22px;
+    }
+    &__label {
+      font-size: 18px;
+      line-height: 30px;
+      left: 23px;
+      top: 40px;
+    }
+    &__input-text {
+      margin: 25px auto;
+    }
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      margin: 40px;
+      border: 2px solid #e5e5e5;
+      background-color: #ffffff;
+      padding-bottom: 20px;
+    }
+    &__textfield-header {
+      &--center {
+        align-self: center;
+        margin-top: -15px;
+        padding: 0 30px;
+        background-color: #ffffff;
+        overflow: hidden;
+      }
+      &--contacts {
+        display: block;
+      }
+      &--hidden {
+        display: none;
+      }
+      &--normal {
+        display: block;
+        margin-top: -10px;
+        margin-bottom: 10px;
+      }
+    }
+    &__textarea {
+      margin: 0 40px;
+    }
+
+    &__btn-send {
+      margin: 0;
+      width: 300px;
+    }
+    &__wrap-button {
+      margin: 0 40px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+@media @desktop-widths {
+  .forms {
+    &__h1 {
+      font-size: 50px;
+      margin: 0 190px;
+    }
+    &__page-forms {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 130px;
+    }
+    &__name-wrap {
+      order: -3;
+      flex-basis: 50%;
+      margin-bottom: 65px;
+    }
+    &__wrap {
+      margin: 0 0 65px 0;
+      &--radio {
+        order: -2;
+      }
+      &--contacts {
+        order: -1;
+        flex-basis: 100%;
+      }
+      &--checkbox {
+        flex-basis: 100%;
+      }
+      &--commit {
+        margin: 0 130px;
+      }
+    }
+    &__contacts-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__checkbox-items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__item {
+      width: 260px;
+    }
+    &__textfield {
+      &--bottom {
+        flex-basis: 100%;
+      }
+    }
+    &__wrap-button {
+      padding-top: 65px;
+      margin: 0 130px;
+    }
   }
 }
