@@ -3,119 +3,150 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="main-menu">
-        <a class="logo" href="#">pink</a>
-        <button class="main-menu__switch" title="Закрыть">Закрыть</button>
-        <ul class="main-menu__items">
-          <li>
-            <a href="#">Главная</a>
-          </li>
-          <li>
-            <a href="#">Фотографии</a>
-          </li>
-          <li>
-            <a href="#">Конкурс</a>
-          </li>
-          <li>
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
+      <nav class="main-nav main-nav--opacity">
+        <a class="logo" href="#"></a>
+        <button class="main-nav__switch main-nav__switch--burger" title="Закрыть"></button>
+        <div class="main-menu main-menu--closed">
+          <ul class="main-menu__items">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li>
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li>
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li>
+              <a href="http://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <main>
-      <div class="form-competition">
-        <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
-      </div>
       <section class="forms">
-        <form action="#" method="post">
-          <h2 class="forms__header">Поделитесь своей историей и получите шанс выиграть ценный приз 1000 миль на вашу бонусную карту!</h2>
-          <div class="forms__textfield">
-            <h3 class="forms__textfield-header">Фамилия:</h3>
-            <input class="forms__input-text" type="text" name="surname" id="surname-id">
-            <label class="forms__label" for="surname-id">Укажите фамилию</label>
+        <div class="forms__competition">
+          <h1 class="forms__h1">Конкурс на самое безбашеное путешествие с Пинк</h1>
+        </div>
+        <h2 class="forms__h2">Поделитесь своей историей и получите шанс выиграть ценный приз 1000 миль на вашу бонусную карту!<br><span>Пожалуйста, заполните форму ниже:</span></h2>
+        <form  action="#" method="post">
+          <div class="forms__page-forms">
+            <div class="forms__name-wrap">
+              <div class="forms__textfield">
+                <h3 class="forms__textfield-header">Фамилия:</h3>
+                <div class="forms__input-item">
+                  <input class="forms__input-text" type="text" name="surname" id="surname-id">
+                  <label class="forms__label" for="surname-id">Укажите фамилию</label>
+                </div>
+              </div>
+              <div class="forms__textfield">
+                <h3 class="forms__textfield-header">Имя:</h3>
+                <div class="forms__input-item">
+                  <input class="forms__input-text" type="text" name="name" id="name-id">
+                  <label class="forms__label" for="name-id">Введите ваше имя</label>
+                </div>
+              </div>
+              <div class="forms__textfield">
+                <h3 class="forms__textfield-header">Отчество:</h3>
+                <div class="forms__input-item">
+                  <input class="forms__input-text" type="text" name="patronymic" id="patronymic-id">
+                  <label class="forms__label" for="patronymic-id">Ну и отчество тоже</label>
+                </div>
+              </div>
+            </div>
+            <div class="forms__wrap forms__wrap--grey forms__wrap--checkbox">
+              <h3 class="forms__textfield-header forms__textfield-header--center">Ваши безбашенные достижения в путешествии</h3>
+              <div class="forms__checkbox-items">
+                <div class="forms__item">
+                  <input class="forms__checkbox" id="selfie-id" type="checkbox" name="selfie" checked>
+                  <label class="forms__checkbox-label" for="selfie-id">Сделал селфи с акулой</label>
+                </div>
+                <div class="forms__item">
+                  <input class="forms__checkbox" id="beach-id" type="checkbox" name="beach" checked>
+                  <label class="forms__checkbox-label" for="beach-id">Обгорел на пляже</label>
+                </div>
+                <div class="forms__item">
+                  <input class="forms__checkbox" id="chak-norris-id" type="checkbox" name="chak-norris">
+                  <label class="forms__checkbox-label" for="chak-norris-id">Видел Чака Норриса</label>
+                </div>
+                <div class="forms__item">
+                  <input class="forms__checkbox" id="souvenirs-id" type="checkbox" name="souvenirs">
+                  <label class="forms__checkbox-label" for="souvenirs-id">Накупил сувениров</label>
+                </div>
+                <div class="forms__item">
+                  <input class="forms__checkbox" id="tower-id" type="checkbox" name="tower" checked>
+                  <label class="forms__checkbox-label" for="tower-id">Удержал башню</label>
+                </div>
+                <div class="forms__item">
+                  <input class="forms__checkbox" id="hotel-id" type="checkbox" name="hotel">
+                  <label class="forms__checkbox-label" for="hotel-id">Разгромил отель</label>
+                </div>
+              </div>
+            </div>
+            <div class="forms__wrap forms__wrap--contacts">
+              <h3 class="forms__textfield-header forms__textfield-header--center forms__textfield-header--contacts">Контактная информация</h3>
+              <div class="forms__contacts-items">
+                <div class="forms__textfield forms__textfield--bottom">
+                  <h3 class="forms__textfield-header forms__textfield-header--hidden">Номерок телефончика</h3>
+                  <h3 class="forms__textfield-header forms__textfield-header--normal">Номер телефона</h3>
+                  <div class="forms__input-item">
+                    <input class="forms__input-text" type="text" name="telephone" id="telephone-id">
+                    <label class="forms__label" class="forms__label" for="telephone-id">Номер, пожалуйста</label>
+                  </div>
+                </div>
+                <div class="forms__textfield forms__textfield--bottom ">
+                  <h3 class="forms__textfield-header forms__textfield-header--hidden">Адресок почты</h3>
+                  <h3 class="forms__textfield-header forms__textfield-header--normal">Адрес почты</h3>
+                  <div class="forms__input-item">
+                    <input class="forms__input-text" type="text" name="mail" id="mail-id">
+                    <label class="forms__label" class="forms__label" for="mail-id">Введите почту</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="forms__wrap forms__wrap--grey forms__wrap--radio">
+              <h3 class="forms__textfield-header forms__textfield-header--center">С каким приложением путешествовали?</h2>
+              <div class="forms__item">
+                <input class="forms__radio" id="ios-id" type="radio" name="application" value="ios" checked>
+                <label class="forms__radio-label" for="ios-id">Pink для iOS</label>
+              </div>
+              <div class="forms__item">
+                <input class="forms__radio" id="android-id" type="radio" name="application" value="android">
+                <label class="forms__radio-label" for="android-id">Pink на Android</label>
+              </div>
+              <div class="forms__item">
+                <input class="forms__radio" id="windows-id" type="radio" name="application" value="windows">
+                <label class="forms__radio-label" for="windows-id">Windows Phone</label>
+              </div>
+            </div>
+        </div>
+          <div class="forms__wrap forms__wrap--commit">
+            <h3 class="forms__textfield-header forms__textfield-header--center">Опишите свои эмоции</h3>
+            <div class="forms__commit">
+              <textarea class="forms__textarea" name="commit-field" id="textarea-id" rows="12" cols="48"></textarea>
+              <label for="textarea-id">Можно прям в красках, не стесняясь в выражениях</label>
+            </div>
           </div>
-          <div class="forms__textfield">
-            <h3 class="forms__textfield-header">Имя:</h3>
-            <input class="forms__input-text" type="text" name="name" id="name-id">
-            <label class="forms__label" for="name-id">Введите ваше имя</label>
+          <div class="forms__wrap-button">
+            <input class="forms__btn-send" type="submit" name="btn-send" value="Отправить форму">
+            <p class="forms__required-fields"><span>*</span>-обязательные поля</p>
           </div>
-          <div class="forms__textfield">
-            <h3 class="forms__textfield-header">Отчество:</h3>
-            <input class="forms__input-text" type="text" name="patronymic" id="patronymic-id">
-            <label class="forms__label" for="patronymic-id">Ну и отчество тоже</label>
-          </div>
-          <h2 class="forms__header">Ваши безбашенные достижения в путешествии</h2>
-          <div class="forms__item-progress">
-            <input class="forms__checkbox" id="selfie-id" type="checkbox" name="selfie" checked>
-            <label for="selfie-id">Сделал селфи с акулой</label>
-          </div>
-          <div class="forms__item-progress">
-            <input class="forms__checkbox" id="beach-id" type="checkbox" name="beach" checked>
-            <label for="beach-id">Обгорел на пляже</label>
-          </div>
-          <div class="forms__item-progress">
-            <input class="forms__checkbox" id="chak-norris-id" type="checkbox" name="chak-norris">
-            <label for="chak-norris-id">Видел Чака Норриса</label>
-          </div>
-          <div class="forms__item-progress">
-            <input class="forms__checkbox" id="souvenirs-id" type="checkbox" name="souvenirs">
-            <label for="souvenirs-id">Накупил сувениров</label>
-          </div>
-          <div class="forms__item-progress">
-            <input class="forms__checkbox" id="tower-id" type="checkbox" name="tower" checked>
-            <label for="tower-id">Удержал башню</label>
-          </div>
-          <div class="forms__item-progress">
-            <input class="forms__checkbox" id="hotel-id" type="checkbox" name="hotel">
-            <label for="hotel-id">Разгромил отель</label>
-          </div>
-          <div class="forms__textfield">
-            <h3 class="forms__textfield-header">Номерок телефончика</h3>
-            <input class="forms__input-text" type="text" name="telephone" id="telephone-id">
-            <label class="forms__label" for="telephone-id">Номер, пожалуйста</label>
-          </div>
-          <div class="forms__textfield">
-            <h3 class="forms__textfield-header">Адресок почты</h3>
-            <input class="forms__input-text" type="text" name="mail" id="mail-id">
-            <label class="forms__label" for="mail-id">Введите почту</label>
-          </div>
-          <h2 class="forms__header">С каким приложением путешествовали?</h2>
-          <div class="forms__application">
-            <input class="forms__radio" id="ios-id" type="radio" name="application" value="ios" checked>
-            <label for="ios-id">Pink для iOS</label>
-          </div>
-          <div class="forms__application">
-            <input class="forms__radio" id="android-id" type="radio" name="application" value="android">
-            <label for="android-id">Pink на Android</label>
-          </div>
-          <div class="forms__application">
-            <input class="forms__radio" id="windows-id" type="radio" name="application" value="windows">
-            <label for="windows-id">Windows Phone</label>
-          </div>
-          <h2 class="forms__header">Опишите свои эмоции</h2>
-          <div class="forms__commit">
-            <textarea class="forms__textarea" name="commit-field" id="textarea-id" rows="6" cols="48"></textarea>
-            <label for="textarea-id">Можно прям в красках, не стесняясь в выражениях</label>
-          </div>
-          <input class="forms__btn-send" type="submit" name="btn-send" value="Отправить форму">
         </form>
-        <p class="forms__required-fields"><span>*</span>-обязательные поля<p>
       </section>
     </main>
-    <footer>
-      <div class="footer-logo">
-        <img src="http://placehold.it/147x40">
-      </div>
+    <footer class="main-footer">
+      <div class="logo logo--footer"></div>
       <div class="social">
         <a class="social__btn social__btn--twitter" href="#">twitter</a>
         <a class="social__btn social__btn--facebook" href="#">facebook</a>
         <a class="social__btn social__btn--youtube" href="#">youtube</a>
       </div>
       <div class="footer-copyright">
-        <p>Разработано</p>
+        <p class="footer-copyright__p">Разработано</p>
         <a class="footer-copyright__academy-logo" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
     </footer>

@@ -1,0 +1,104 @@
+.slider {
+  &__inner {
+    overflow: hidden;
+    width: 280px;
+    margin: 0 auto;
+    &--table {
+      width: 280px;
+    }
+  }
+  &__slides {
+    display: flex;
+    width: 300%;
+  }
+  &__controls {
+    font-size: 0;
+    text-align: center;
+  }
+  &__controls label {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #d2d4d8;
+    display:inline-block;
+    margin: 0 10px;
+  }
+}
+.slider input[type=radio] {
+  display: none;
+}
+#btn-1:checked ~ .slider__controls label[for="btn-1"],
+#btn-2:checked ~ .slider__controls label[for="btn-2"],
+#btn-3:checked ~ .slider__controls label[for="btn-3"],
+#btn-4:checked ~ .slider__controls label[for="btn-4"],
+#btn-5:checked ~ .slider__controls label[for="btn-5"],
+#btn-6:checked ~ .slider__controls label[for="btn-6"]  {
+    background-color: transparent;
+    box-shadow:0 0 0 3px #79828b;
+}
+#btn-1:checked ~ .slider__inner .slider__slides {
+    transform: translate(0);
+}
+#btn-2:checked ~ .slider__inner .slider__slides {
+    transform: translate(-280px);
+}
+#btn-3:checked ~ .slider__inner .slider__slides {
+    transform: translate(-560px);
+}
+#btn-4:checked ~ .slider__inner .slider__slides {
+    transform: translate(0);
+}
+#btn-5:checked ~ .slider__inner .slider__slides {
+    transform: translate(-280px);
+}
+#btn-6:checked ~ .slider__inner .slider__slides {
+    transform: translate(-560px);
+}
+@media @tablet-widths {
+    .slider {
+      &__inner {
+        width: 620px;
+      }
+      &__controls {
+        &--table label {
+          display: none;
+        }
+      }
+    }
+    #btn-1:checked ~ .slider__inner .slider__slides {
+        transform: translate(0);
+    }
+    #btn-2:checked ~ .slider__inner .slider__slides {
+        transform: translate(-620px);
+    }
+    #btn-3:checked ~ .slider__inner .slider__slides {
+        transform: translate(-1240px);
+    }
+    #btn-5:checked ~ .slider__inner .slider__slides {
+        transform: translate(0px);
+    }
+    #btn-6:checked ~ .slider__inner .slider__slides {
+        transform: translate(0px);
+    }
+}
+@media @desktop-widths {
+    .slider {
+      &__inner {
+        width: 820px;
+        margin: 0 auto;
+        &--table {
+          width: 920px;
+        }
+      }
+    }
+    #btn-1:checked ~ .slider__inner .slider__slides {
+        transform: translate(0);
+    }
+    #btn-2:checked ~ .slider__inner .slider__slides {
+        transform: translate(-820px);
+    }
+    #btn-3:checked ~ .slider__inner .slider__slides {
+        transform: translate(-1640px);
+    }
+  }

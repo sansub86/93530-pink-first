@@ -1,0 +1,99 @@
+.intro {
+  &__image {
+    height: 395px;
+    background: url('../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
+                url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
+    background-size: auto, cover;
+    margin-top: 220px;
+  }
+  &__download {
+    display: block;
+    height: 55px;
+    width: 280px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+    padding: 15px 0;
+    border: 3px solid #ffffff;
+    border-radius: 55px;
+    box-sizing: border-box;
+  }
+  &__download-block {
+      background: #1d2631;
+      padding-top: 27px;
+  }
+  &__intro-wrapper {
+    margin: 0 auto;
+    width: 280px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__intro-logo {
+    width: 60px;
+    height: 60px;
+    }
+  &__intro-logo--apple {
+    background: url('../img/logo-apple.svg') no-repeat 50% 50%;
+  }
+  &__intro-logo--android {
+    background: url('../img/logo-android.svg') no-repeat 50% 50%;
+  }
+  &__intro-logo--windows {
+    background: url('../img/logo-microsoft.svg') no-repeat 50% 50%;
+  }
+  &__message {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-size: 14px;
+    width: 280px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 0;
+    margin: 0 auto;
+  }
+  &__header {
+      display: none;
+  }
+}
+@media @tablet-widths {
+  .intro {
+
+    &__image {
+      margin-top: 0;
+      height: 730px;
+      background: url('../img/iphone-hand-mobile@1x.png') no-repeat 85% bottom,
+                  url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
+      background-size: 460px, cover;
+    }
+    &__download-block {
+      background-color: transparent;
+      position: absolute;
+      top: 200px;
+      width: 50%;
+    }
+    &__header {
+      display: inline;
+      font-family: "Open Sans Light", Arial, sans-serif;
+      font-size: 40px;
+      line-height: 60px;
+      color: #ffffff;
+      display: block;
+      margin-left: 75px;
+      margin-right: 75px;
+      text-align: center;
+    }
+  }
+}
+@media @desktop-widths {
+  .intro {
+    &__image {
+      margin-top: 0;
+    }
+  }
+}

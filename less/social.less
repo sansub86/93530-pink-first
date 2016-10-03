@@ -1,0 +1,45 @@
+  .social {
+    &__btn {
+      display: inline-block;
+      margin: 0 6px;
+      font-size: 0;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      box-shadow:0 0 0 3px grey;
+      &--twitter {
+        background: url('../img/icon-twitter.svg') no-repeat 50% 50%;
+      }
+      &--facebook {
+        background: url('../img/icon-facebook.svg') no-repeat 50% 50%;
+      }
+      &--youtube{
+        background: url('../img/icon-youtube.svg') no-repeat 50% 50%;
+      }
+    }
+    margin-bottom: 57px;
+  }
+  .footer-copyright {
+    &__p {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: "Open Sans Regular", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      color: #000000;
+      padding-top: 10px;
+      padding-right: 10px;
+    }
+    &__academy-logo {
+      display: inline-block;
+      width: 27px;
+      height: 37px;
+      background: url('../img/logo-htmlacademy.svg') no-repeat 50% 50%;
+      font-size: 0;
+    }
+  }
+@media @tablet-widths {
+  .social {
+    margin-bottom: 0;
+  }
+}
