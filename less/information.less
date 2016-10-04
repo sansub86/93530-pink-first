@@ -1,29 +1,34 @@
 .information {
+  min-width: 320px;
   &__header {
-    padding:25px 0;
+    padding-top: 25px;
+    padding-bottom: 20px;
   }
   &__h2 {
     font-family: "Open Sans Light", Arial, sans-serif;
     font-size: 24px;
     text-align: center;
-    padding: 20px 60px;
+    padding: 13px 50px;
   }
   &__h3 {
     font-family: "Open Sans Bold", Arial, sans-serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
   }
   &__features {
     position: relative;
-    background-color: #f2f2f2;
     text-align: center;
-    padding-bottom: 320px;
+    padding-bottom: 290px;
+    background: #f2f2f2 url('../img/bg-triangle-white.svg') no-repeat 0 0;
+    background-size: 100% auto;
+    overflow: hidden;
+    padding-top: 77px;
   }
   &__item {
-    font-family: "Open Sans Regular", Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
-    line-height: 18px;
-    padding: 0 25px;
+    line-height: 24px;
+    padding: 0 20px;
     margin: 10px 0 30px 0px;
   }
   &__image {
@@ -37,7 +42,7 @@
     }
     &--item3 {
       position: absolute;
-      bottom: 0;
+      bottom: -40px;
       background: url('../img/iphone-screen-mobile@1x.png') no-repeat 50% 0;
     }
   }
@@ -45,9 +50,13 @@
 
 @media @tablet-widths {
   .information {
+    &__header {
+      padding-top: 50px;
+      padding-bottom: 45px;
+    }
     &__h2 {
       font-size: 40px;
-      line-height: 60px;
+      line-height: 48px;
       margin: 0;
       padding: 0 40px;
     }
@@ -57,18 +66,19 @@
     &__features {
       padding-bottom: 0;
       padding-left: 50%;
-      padding-top: 80px;
+      padding-top: 75px;
+      padding-bottom: 10px;
       text-align: left;
-      overflow: hidden;
+
     }
     &__item {
       padding: 0;
-      margin: 10px 40px 40px 0px;
+      margin: 10px 40px 32px 0px;
     }
     &__image {
       &--item3 {
         right:25%;
-        bottom: -40px;
+        bottom: 45px;
         transform: scale(1.7);
       }
     }

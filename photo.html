@@ -95,23 +95,48 @@
       </section>
       <h2 class="forms__h2">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</h2>
       <div class="upload-image">
-        <img class="photo__image photo__image--upload" src="./img/photo-7-mobile@1x.jpg" width="280" height="180">
-        <div class="upload-image__filters">
-          <a class="upload-image__filter upload-image--crop" href="#">Обрезать</a>
-          <a class="upload-image__filter upload-image--fill" href="#">Заливка</a>
-          <a class="upload-image__filter upload-image--contrast" href="#">Контраст</a>
-        </div>
-        <div class="upload-image__scale">
-          <div class="upload-image__scale-image">
-            <div class="upload-image__scale-image-point"></div>
-          </div>
-        </div>
-        <form  action="#" method="post">
-          <div class="upload-image__form">
-          <input class="upload-image__btn upload-image__btn--active" type="submit" name="btn-upload" value="Запостить">
-          <button class="upload-image__btn upload-image__btn--disabled">Отмена</button>
-        </div>
-        </form>
+	  	<div class="upload-image__wrap-image">
+			<img class="photo__image photo__image--upload" src="./img/photo-7-mobile@1x.jpg" width="280" height="180">
+		</div>
+		<div class="upload-image__wrap-filters">
+			<div class="upload-image__filters">
+				<div class="upload-image__scale-item">
+					<a class="upload-image__filter upload-image--crop" href="#">Обрезать</a>
+					<div class="upload-image__scale upload-image__scale--crop">
+						<div class="upload-image__scale-image">
+							<div class="upload-image__scale-image-point upload-image__scale-image-point--crop"></div>
+						</div>
+					</div>
+				</div>
+				<div class="upload-image__scale-item">	
+					<a class="upload-image__filter upload-image--fill" href="#">Заливка</a>
+					<div class="upload-image__scale upload-image__scale--fill">
+					  <div class="upload-image__scale-image">
+						<div class="upload-image__scale-image-point upload-image__scale-image-point--fill"></div>
+					  </div>
+					</div>
+				</div>
+				<div class="upload-image__scale-item">	
+					<a class="upload-image__filter upload-image--contrast" href="#">Контраст</a>
+					<div class="upload-image__scale upload-image__scale--contrast">
+					  <div class="upload-image__scale-image">
+						<div class="upload-image__scale-image-point upload-image__scale-image-point--contrast"></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="upload-image__scale">
+			  <div class="upload-image__scale-image">
+				<div class="upload-image__scale-image-point"></div>
+			  </div>
+			</div>
+			<div class="upload-image__wrap-button">
+				<form action="#" method="post">
+					<input class="upload-image__btn upload-image__btn--active" type="submit" name="btn-upload" value="Запостить">
+					<button class="upload-image__btn upload-image__btn--disabled">Отмена</button>
+				</form>
+			</div>
+		</div>
       </div>
     </main>
     <footer class="main-footer">

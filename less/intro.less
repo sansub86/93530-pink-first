@@ -1,10 +1,11 @@
 .intro {
   &__image {
-    height: 395px;
+    height: 430px;
     background: url('../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
                 url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
     background-size: auto, cover;
     margin-top: 220px;
+    min-width: 320px;
   }
   &__download {
     display: block;
@@ -18,18 +19,20 @@
     line-height: 18px;
     margin: 0 auto;
     margin-bottom: 27px;
-    padding: 15px 0;
+    padding: 16px 0;
     border: 3px solid #ffffff;
     border-radius: 55px;
     box-sizing: border-box;
   }
   &__download-block {
+    min-width: 320px;
       background: #1d2631;
       padding-top: 27px;
+      padding-bottom: 5px;
   }
   &__intro-wrapper {
     margin: 0 auto;
-    width: 280px;
+    width: 220px;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -39,13 +42,13 @@
     height: 60px;
     }
   &__intro-logo--apple {
-    background: url('../img/logo-apple.svg') no-repeat 50% 50%;
+    background: url('../img/logo-apple.svg') no-repeat 50% 100%;
   }
   &__intro-logo--android {
-    background: url('../img/logo-android.svg') no-repeat 50% 50%;
+    background: url('../img/logo-android.svg') no-repeat 50% 100%;
   }
   &__intro-logo--windows {
-    background: url('../img/logo-microsoft.svg') no-repeat 50% 50%;
+    background: url('../img/logo-microsoft.svg') no-repeat 50% 100%;
   }
   &__message {
     font-family: "Open Sans Light", Arial, sans-serif;
@@ -54,7 +57,7 @@
     line-height: 24px;
     text-align: center;
     color: #ffffff;
-    padding: 30px 0;
+    padding: 25px 0;
     margin: 0 auto;
   }
   &__header {
@@ -69,24 +72,37 @@
       height: 730px;
       background: url('../img/iphone-hand-mobile@1x.png') no-repeat 85% bottom,
                   url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
-      background-size: 460px, cover;
+      background-size: 450px 520px, cover;
     }
     &__download-block {
       background-color: transparent;
       position: absolute;
       top: 200px;
       width: 50%;
+      padding-top: 10px;
+      margin-left: 10px;
     }
     &__header {
       display: inline;
       font-family: "Open Sans Light", Arial, sans-serif;
       font-size: 40px;
-      line-height: 60px;
+      line-height: 48px;
       color: #ffffff;
       display: block;
-      margin-left: 75px;
-      margin-right: 75px;
+      margin-left: 65px;
+      margin-right: 65px;
       text-align: center;
+    }
+    &__download {
+      margin-top: 30px;
+      width: 300px;
+      margin-bottom: 42px;
+    }
+    &__message {
+      font-size: 18px;
+      width: auto;
+      margin: 0 10px;
+      padding-top: 37px;
     }
   }
 }
