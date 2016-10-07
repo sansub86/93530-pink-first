@@ -150,14 +150,47 @@
 }
 @media @desktop-widths {
   .price {
+    padding-bottom: 95px;
     &__list td {
-      width: 234px;
+      width: 235px;
+      height: 61px;
+      font-size: 18px;
+
+    }
+    &__list td:first-child {
+      padding-left: 23px;
     }
     &__list th {
       width: 234px;
+      height: 98px;
+      font-size: 24px;
+      line-height: 30px;
     }
+
     &__icon {
       left: 102px;
+      &--yes {
+        top: 22px;
+      }
+      &--no {
+        top: 19px;
+      }
     }
+    &__hit::before {
+      width: 75px;
+      height: 75px;
+      background-size: contain;
+    }
+    &__hit::after {
+      top: 15px;
+      left: 10px;
+    }
+  }
+  .price::before {
+    height: 100px;
+  }
+  .price__th {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

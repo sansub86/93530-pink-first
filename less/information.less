@@ -86,16 +86,38 @@
 }
 @media @desktop-widths {
   .information {
+    &__h2 {
+      font-size: 50px;
+      line-height: 60px;
+
+
+    }
     &__h3 {
+      position: relative;
       font-size: 30px;
       line-height: 30px;
       text-align: center;
+      margin: 0 15px;
+      padding: 0 15px;
+      overflow: hidden;
+      display: block;
+      top: -20px;
+      background-color: #f2f2f2;
+      padding-top: 58px;
+      padding-bottom: 3px;
+      box-shadow: 0 -10px 10px -10px black;
+
+    }
+    &__header {
+      margin-top: 18px;
+      margin-bottom: 32px;
     }
     &__item {
       font-size: 18px;
       line-height: 30px;
       text-align: center;
-      margin: 0;
+      margin: 0 30px;
+
     }
     &__features {
       display: flex;
@@ -104,24 +126,32 @@
       padding: 0 130px;
     }
     &__wrapper {
-      outline: 1px solid red;
-      width: 260px;
+      width: 300px;
     }
     &__image {
+      width: 186px;
+      height: 320px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      bottom: 0px;
+
       &--item1, &--item2 {
-        display: block;
+        display:block;
       }
       &--item1 {
           background: url('../img/iphone-screen-mobile@1x.png') no-repeat 50% 0;
+          background-size: cover;
       }
       &--item2 {
           background: url('../img/iphone-screen-mobile@1x.png') no-repeat 50% 0;
+          background-size: cover;
       }
       &--item3 {
         position: relative;
         transform: none;
-        bottom: 0;
         right: 0;
+        background-size: cover;
       }
     }
   }
