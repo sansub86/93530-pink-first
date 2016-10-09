@@ -49,7 +49,7 @@
     }
   }
   &__textfield {
-    margin: 0;
+    margin-bottom: 55px;
   }
 
   &__input-item {
@@ -80,6 +80,7 @@
   }
   &__name-wrap {
     padding: 0 20px;
+
   }
   &__radio-items {
     margin-top: 14px;
@@ -211,17 +212,20 @@
     line-height: 30px;
     color: #ffffff;
     margin-bottom: 35px;
-}
+  }
   &__required-fields {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     line-height: 30px;
     display: block;
-
   }
-  &__required-fields span {
+  &__star {
     color: #d22856;
+    display: inline;
+  }
+  &__text {
+    display: none;
   }
 }
 @media @tablet-widths {
@@ -251,29 +255,63 @@
       display: inline;
     }
     &__name-wrap {
-
       margin: 0 40px;
       padding: 0;
+      margin-top: 30px;
+      margin-bottom: -28px;
     }
     &__textfield {
       display: flex;
       align-items: center;
+      margin-bottom: 53px;
       &--bottom {
         flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: flex-start;
+        margin-bottom: 20px;
       }
     }
-    &__textfield:last-child {
+
+    &__radio-items {
+      margin-top: 22px;
     }
+
     &__label {
       font-size: 18px;
       line-height: 30px;
-      left: 23px;
-      top: 40px;
+      left: 20px;
+      top: 17px;
+    }
+    &__item label {
+      margin-left: 60px;
     }
     &__input-text {
-      margin: 27px auto;
+      margin: 0 auto;
+      box-sizing: border-box;
+      height: 62px;
+    }
+    &__input-item--telephone::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      top: 0;
+      right: 0;
+      background-color: #e5e5e5;
+    }
+    &__input-item--mail::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      background-color: #e5e5e5;
+      top: 0;
+      right: 0;
+    }
+    &__contacts-items {
+      margin-top: 35px;
     }
     &__wrap {
       display: flex;
@@ -284,52 +322,85 @@
       padding-bottom: 20px;
       &--checkbox {
         order: 2;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 20px;
       }
       &--radio {
         margin-top: 38px;
-
+        padding-left: 58px;
+        padding-bottom: 40px;
       }
       &--contacts {
         order: 1;
+        margin-top: 24px;
+        padding: 0 60px;
+        padding-top: 37px;
+      }
+      &--commit {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        margin-top: 31px;
       }
     }
-
+    &__checkbox-items {
+      margin-left: 20px;
+      margin-top: 23px;
+    }
     &__textfield-header {
-      margin-right: 10px;
       margin-left: 0px;
+      margin-right: 20px;
+
       &--center {
         margin-right: 0;
         align-self: center;
         margin-top: -45px;
         padding: 0 30px;
+        margin-left: -38px;
         background-color: #ffffff;
         overflow: hidden;
       }
       &--contacts {
         display: block;
         margin-bottom: 0;
-          margin-top: -15px;
+        margin-left: 0;
+      }
+      &--checkbox {
+        margin-left: 0;
+      }
+      &--commit {
+        margin-top: -40px;
+        margin-left: 0px;
       }
       &--hidden {
         display: none;
       }
       &--normal {
         display: block;
-        margin-top: -10px;
+        margin-top: 10px;
         margin-bottom: 10px;
+        margin-left: 20px;
       }
     }
     &__textarea {
-      margin: 0 40px;
-
+      margin: 0 58px;
+      width: auto;
+      margin-top: 37px;
+      padding: 0;
+      padding-bottom: 5px;
+      height: 192px;
     }
-
+    &__commit label {
+      top: 52px;
+      left: 80px;
+    }
     &__btn-send {
       margin: 0;
       width: 300px;
     }
     &__wrap-button {
       margin: 0 40px;
+      margin-top: 67px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -341,31 +412,76 @@
     &__h1 {
       font-size: 50px;
       margin: 0 190px;
+      padding-top: 177px;
+    }
+    &__h2 {
+      margin: 0 220px;
+      padding-bottom: 78px;
+    }
+    &__competition {
+      height: 396px;
     }
     &__page-forms {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
       margin: 0 130px;
     }
     &__name-wrap {
       order: -3;
-      flex-basis: 50%;
-      margin-bottom: 65px;
+      flex-basis: 46.3%;
+      margin: 0;
+      margin-bottom: 0px;
+      margin-top: 5px;
+    }
+    &__textfield-header {
+      &--center {
+        margin-left: -75px;
+      }
+      &--contacts {
+        margin-left: 0;
+      }
+      &--checkbox {
+
+        z-index: 1;
+        margin-top: -66px;
+        margin-left: -10px;
+      }
+      &--commit {
+        margin-left: 0;
+      }
+    }
+    &__input-text {
+      height: 64px;
     }
     &__wrap {
       margin: 0 0 65px 0;
       &--radio {
         order: -2;
+        flex-basis: 46.3%;
+        padding-left: 75px;
+        padding-right: 3px;
+        padding-bottom: 0;
+        height: 300px;
+        box-sizing: border-box;
       }
       &--contacts {
         order: -1;
         flex-basis: 100%;
+        padding-top: 33px;
       }
       &--checkbox {
         flex-basis: 100%;
+        padding-right: 50px;
+        padding-left: 58px;
+        padding-top: 57px;
+        padding-bottom: 32px;
+
       }
       &--commit {
         margin: 0 130px;
+        padding-bottom: 44px;
       }
     }
     &__contacts-items {
@@ -375,21 +491,32 @@
     }
     &__checkbox-items {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
+      align-content: space-between;
+      margin: 0;
+      height: 167px;
+      box-sizing: border-box;
+      margin-top: 20px;
     }
-    &__item {
-      width: 260px;
+    &__textarea {
+      margin-top: 34px;
+      height: 128px;
     }
     &__textfield {
       &--bottom {
-        flex-basis: 100%;
+        margin-bottom: 2px;
+        flex-basis: 45.7%;
       }
     }
     &__wrap-button {
       padding-top: 65px;
       margin: 0 130px;
+    }
+    &__text {
+      display: inline;
+
     }
   }
 }
