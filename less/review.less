@@ -1,20 +1,27 @@
 .review {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  min-width: 320px;
+   &__btn-back, &__btn-next {
+     display: none;
+   }
   &__h3 {
     font-family: "Open Sans Bold", Arial, sans-serif;
     font-size: 18px;
     line-height: 30px;
     text-align: center;
     margin: 0 20px;
+    padding-bottom: 13px;
   }
   &__about {
     display: none;
   }
   &__item {
-    font-family: "Open Sans Regular", Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 30px;
     text-align: center;
-    margin: 0 20px;
+    margin: 0;
   }
   &__slide1, &__slide2, &__slide3 {
     width:280px;
@@ -22,6 +29,10 @@
 }
 @media @tablet-widths {
   .review {
+    margin-bottom: 10px;
+    &__btn-back, &__btn-next {
+      display: none;
+    }
     &__slide1, &__slide2, &__slide3 {
       width:620px;
       position: relative;
@@ -32,18 +43,67 @@
 
     &__about {
       display: block;
-      font-family: "Open Sans Regular", Arial, sans-serif;
+      font-family: "Open Sans", Arial, sans-serif;
       font-size: 14px;
       line-height: 30px;
       text-align: center;
       order: -1;
     }
     &__item {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    &__h3 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 35px;
+      padding-bottom: 3px;
     }
   }
 }
 @media @desktop-widths {
   .review {
+    margin-top: 185px;
+    margin-bottom: 40px;
+    position: relative;
+    &__btn-back, &__btn-next {
+      display: block;
+      width: 22px;
+      height: 42px;
+      position: absolute;
+    }
+    &__btn-back {
+        left: 127px;
+        top: 28px;
+      }
+      &__btn-back::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-top: 2px solid #c2c6ca;
+        border-left: 2px solid #c2c6ca;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+      &__btn-next::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-top: 2px solid #c2c6ca;
+        border-left: 2px solid #c2c6ca;
+        transform: rotate(135deg);
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    &__btn-next {
+        right: 130px;
+        top: 28px;
+      }
     &__slide1, &__slide2, &__slide3 {
       width:820px;
     }
@@ -58,6 +118,7 @@
     &__item {
       font-size: 18px;
       line-height: 30px;
+      margin: 0 30px;
     }
   }
 }
