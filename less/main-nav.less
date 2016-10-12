@@ -8,19 +8,30 @@
     background-color: rgba(40, 54, 69, 0.7);
     margin-bottom: -66px;
     }
+  &__burger {
+    display: none;
+  }
+  &__hide {
+    display: none;
+  }
+  &__cross:hover path{
+    fill: #d22856;
+  }
+  &__cross:active path {
+   fill: rgba(210, 40, 86, .3);
+  }
   &__switch {
     position: absolute;
     cursor: pointer;
     border: none;
+    background: none;
     &--cross {
       top: 20px;
       right: 20px;
       width: 25px;
       height: 25px;
-      background: url('../img/icon-menu-cross.svg') no-repeat;
     }
     &--burger {
-      background: url('../img/icon-menu-burger.svg') no-repeat;
       top: 21px;
       right: 20px;
       width: 50px;
@@ -36,12 +47,24 @@
     box-sizing: border-box;
     margin-bottom: -110px;
     border-bottom: none;
+    &__burger {
+      display: block;
+    }
+    &__burger:hover path{
+      fill: #d22856;
+    }
+    &__burger:active path {
+     fill: rgba(210, 40, 86, .3);
+    }
+    &__cross {
+      display: none;
+    }
     &__switch {
       top: 45px;
       right: 40px;
       width: 50px;
       height: 25px;
-      background: url('../img/icon-menu-burger.svg') no-repeat;
+      //background: url('../img/icon-menu-burger.svg') no-repeat;
     }
   }
 }

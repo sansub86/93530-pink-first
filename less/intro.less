@@ -24,8 +24,16 @@
     border-radius: 55px;
     box-sizing: border-box;
   }
+  &__download:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+  &__download:active {
+    background-color: #ffffff;
+    color: rgba(210, 40, 86, .3);
+  }
   &__download-block {
-    min-width: 320px;
+      min-width: 320px;
       background: #1d2631;
       padding-top: 27px;
       padding-bottom: 5px;
@@ -69,16 +77,18 @@
 
     &__image {
       margin-top: 0;
-      height: 855px;
-      background: url('../img/iphone-hand-mobile@1x.png') no-repeat 75% bottom,
-                  url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
-      background-size: 552px 645px, cover;
+      height: 729px;
+      background: url('../img/iphone-hand-tablet@1x.png') no-repeat 100% bottom,
+                  url('../img/bg-back-tablet@1x.jpg') no-repeat 50% 100%;
+      background-size: 100%, cover;
     }
     &__download-block {
       background-color: transparent;
       position: absolute;
       top: 200px;
-      width: 50%;
+      width: 320px;
+      box-sizing: border-box;
+      margin-left: 30px;
       padding-top: 10px;
     }
     &__header {
@@ -96,11 +106,13 @@
       margin-top: 30px;
       width: 300px;
       margin-bottom: 42px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
     &__message {
       font-size: 18px;
       width: auto;
-      margin: 0 10px;
+      margin: 0;
       padding-top: 37px;
     }
   }
@@ -109,27 +121,37 @@
   .intro {
     &__image {
       margin-top: 0;
+      background: url('../img/iphone-hand-desktop@1x.png') no-repeat 100% bottom,
+                  url('../img/bg-back-desktop@1x.jpg') no-repeat 50% 100%;
+      background-size: 88%, cover;
+      height: 855px;
+    }
+    &__download-block {
+      margin-left: 120px;
     }
     &__header {
       font-size: 50px;
       line-height: 61px;
-      margin-left: 92px;
+      margin-left: 0px;
       margin-top: 18px;
-      margin-right: 150px;
+      margin-right: 0px;
       padding-bottom: 18px;
     }
     &__download {
-      margin-left: 129px;
+      margin-left: auto;
+      margin-right: auto;
       font-size: 21px;
+
     }
     &__intro-wrapper {
-      margin-left: 169px;
+      margin-left: auto;
       margin-top: 62px;
+      margin-right: auto;
     }
     &__message {
       padding-top: 57px;
-      margin-left: 105px;
-      margin-right: 160px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

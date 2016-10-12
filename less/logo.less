@@ -1,36 +1,105 @@
 .logo {
   display: block;
   text-decoration: none;
-  width: 75px;
-  height: 22px;
   margin-left: 20px;
-  background: transparent url('../img/logo-pink-white-mobile.svg') no-repeat;
+  //background: transparent url('../img/logo-pink-white-mobile.svg') no-repeat;
+  &__tablet, &__desktop {
+    display: none;
+  }
+  &__footer{
+    &-desktop {
+      display: none;
+    }
+    &-mobile:hover path{
+      fill: #d22856;
+    }
+    &-mobile:active path{
+      fill: #d22856;
+      opacity: 0.3;
+    }
+  }
   &--footer {
-    display: block;
-    width: 150px;
-    height: 40px;
-    background: transparent url('../img/logo-pink-blue-mobile.svg') no-repeat;
+    font-size: 0;
+    //background: transparent url('../img/logo-pink-blue-mobile.svg') no-repeat;
     margin-bottom: 37px;
     margin-left: 9px;
   }
+  &:hover &__mobile path {
+   fill: #d22856;
+  }
+  &:active &__mobile path {
+   fill: rgba(255, 255, 255, .3);
+  }
 }
+
 
 @media @tablet-widths {
   .logo {
     width: 150px;
     height: 40px;
     padding-top: 2px;
-    background: transparent url('../img/logo-pink-white.svg') no-repeat 0 0;
+    //background: transparent url('../img/logo-pink-white-tablet.svg') no-repeat 0 0;
+    &__mobile, &__desktop {
+      display: none;
+    }
+    &__tablet {
+      display: block;
+    }
     margin: 0;
+    &__footer-desktop {
+        display: none;
+      }
+      &__footer {
+      &-mobile:hover path{
+        fill: #d22856;
+      }
+      &-mobile:active path{
+        fill: #d22856;
+        opacity: 0.3;
+      }
+    }
+    &:hover &__tablet path {
+     fill: #d22856;
+    }
+    &:active &__tablet path {
+     fill: rgba(255, 255, 255, .3);
+    }
     &--footer {
-        background: transparent url('../img/logo-pink-blue-mobile.svg') no-repeat;
+        //background: transparent url('../img/logo-pink-blue-mobile.svg') no-repeat;
         margin-top: 0;
     }
   }
 }
 @media @desktop-widths {
   .logo {
-
     margin-top: 4px;
+    //background: transparent url('../img/logo-pink-white-desktop.svg') no-repeat 0 0;
+    &__desktop {
+      display: block;
+    }
+    &:hover &__desktop path {
+     fill: #d22856;
+    }
+    &:active &__desktop path {
+     fill: rgba(255, 255, 255, .3);
+    }
+    &__tablet {
+      display: none;
+    }
+    &__footer {
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        display: inline-block;
+      }
+      &-desktop:hover path{
+        fill: #d22856;
+      }
+      &-desktop:active path{
+        fill: #d22856;
+        opacity: 0.3;
+      }
+    }
   }
 }
