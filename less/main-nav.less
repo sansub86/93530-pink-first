@@ -1,7 +1,9 @@
 .main-nav {
-  background-color: #283645;
-  border-bottom: 1px solid black;
+  background-color: rgba(29, 38, 49, 0.7);
   position: relative;
+  &--opacity {
+    background-color: #283645;
+  }
   &--hide {
     display: none;
   }
@@ -23,7 +25,7 @@
     border: none;
     padding: 0;
     background: none;
-    top: 21px;
+    top: 23px;
     right: 20px;
     width: 50px;
     height: 24px;
@@ -37,13 +39,9 @@
 }
 @media @tablet-widths {
   .main-nav {
-    background-color: rgba(40, 54, 69, 0.8);
     box-sizing: border-box;
     margin-bottom: -110px;
     border-bottom: none;
-    &--opacity {
-      background-color: #283645;
-    }
     &__switch {
       top: 43px;
       right: 40px;
