@@ -1,0 +1,41 @@
+
+.footer-copyright {
+  &__p {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    padding-top: 0px;
+    padding-right: 11px;
+  }
+  &__academy-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+    height: 34px;
+    font-size: 0;
+    &:hover path{
+      fill:#283645;
+    }
+    &:active path {
+      fill: #bec2c7;
+    }
+  }
+}
+@media @tablet-widths {
+  .footer-copyright {
+      margin-top: 0px;
+  }
+}
+@media @desktop-widths {
+  .footer-copyright {
+    margin-top: 35px;
+    &__p {
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 8px;
+    }
+  }
+}

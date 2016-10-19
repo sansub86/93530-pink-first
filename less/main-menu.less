@@ -1,5 +1,4 @@
 .main-menu {
-  margin-top: 26px;
   &--closed {
       display: none;
   }
@@ -22,10 +21,15 @@
     border-top: 1px solid #485461;
     border-bottom: 1px solid black;
   }
+  li:hover &__item {
+    color: #d22856;
+  }
+  li:active &__item {
+    color: rgba(210,40,86, 0.3);
+  }
 }
 @media @tablet-widths {
   .main-menu {
-    display: none;
   }
 }
 
@@ -47,7 +51,23 @@
       border-top: none;
       border-bottom: none;
       text-transform: none;
+      padding:0;
+      margin: 15px 0;
+    }
+    &__on-page a{
+      border-bottom: 2px solid #ffffff;
+    }
+    li:active &__item {
+      color: rgba(255,255,255, 0.3);
+    }
 
+    &__on-page:hover &__item {
+      color: #d22856;
+      border-bottom: 2px solid #d22856;
+    }
+    &__on-page:active &__item {
+      color: rgba(255,255,255, 0.3);
+      border-bottom: 2px solid rgba(255,255,255, 0.3);
     }
   }
 }

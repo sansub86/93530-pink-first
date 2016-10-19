@@ -6,6 +6,7 @@
   &__h2 {
     font-family: "Open Sans Light", Arial, sans-serif;
     font-size: 24px;
+    margin: 0 40px;
     padding-bottom: 15px;
     line-height: 28px;
     color: #283645;
@@ -23,6 +24,14 @@
     color: #d22856;
     padding: 0 20px 0px 20px;
   }
+  &__item2:hover &__item{
+    color: #283645;
+    text-decoration: underline;
+  }
+  &__item2:active &__item{
+    color: #cdcfd1;
+    text-decoration: underline;
+  }
 }
 .feedback a {
   text-decoration: none;
@@ -30,10 +39,11 @@
 
 @media @tablet-widths {
   .feedback {
-    padding-bottom: 28px;
+    padding-bottom: 26px;
     &__h2 {
       font-size: 40px;
       line-height: 48px;
+      margin: 0 130px;
     }
     &__item {
       padding: 0;
@@ -57,9 +67,11 @@
 @media @desktop-widths {
   .feedback {
     padding-top: 66px;
+    padding-bottom: 20px;
     &__h2 {
       font-size: 50px;
       line-height: 60px;
+      margin: 0 250px;
     }
     &__h3 {
       margin-bottom: 20px;

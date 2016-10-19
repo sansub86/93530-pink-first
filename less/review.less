@@ -5,6 +5,9 @@
    &__btn-back, &__btn-next {
      display: none;
    }
+   &__quotes {
+     display: none;
+   }
   &__h3 {
     font-family: "Open Sans Bold", Arial, sans-serif;
     font-size: 18px;
@@ -63,9 +66,15 @@
 }
 @media @desktop-widths {
   .review {
-    margin-top: 185px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 38px;
     position: relative;
+    &__quotes {
+      display: block;
+      margin-top: 71px;
+      height: 64px;
+      background: url('../img/icon-quotes.svg') no-repeat 50% 0;
+    }
     &__btn-back, &__btn-next {
       display: block;
       width: 22px;
@@ -73,37 +82,27 @@
       position: absolute;
     }
     &__btn-back {
-        left: 127px;
-        top: 28px;
+        left: 130px;
+        top: 25px;
+        cursor: pointer;
       }
-      &__btn-back::before {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 30px;
-        border-top: 2px solid #c2c6ca;
-        border-left: 2px solid #c2c6ca;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 5px;
-        left: 5px;
-      }
-      &__btn-next::after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 30px;
-        border-top: 2px solid #c2c6ca;
-        border-left: 2px solid #c2c6ca;
-        transform: rotate(135deg);
-        position: absolute;
-        top: 5px;
-        right: 5px;
-      }
+    &__btn-back-icon:hover path {
+      fill:#7e868f;
+    }
+    &__btn-back-icon:active path {
+      fill:#e9ebec;
+    }
     &__btn-next {
         right: 130px;
-        top: 28px;
+        top: 25px;
+        cursor: pointer;
       }
+    &__btn-next-icon:hover path {
+      fill:#7e868f;
+    }
+    &__btn-next-icon:active path {
+      fill:#e9ebec;
+    }
     &__slide1, &__slide2, &__slide3 {
       width:820px;
     }
