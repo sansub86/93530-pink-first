@@ -2,11 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <svg style ="display:none">
+    </svg>
     <header class="main-header">
       <nav class="main-nav main-nav--opacity">
         <a class="logo" href="#">
@@ -76,7 +79,7 @@
         </button>
         <div class="main-menu">
           <ul class="main-menu__items">
-            <li class="main-menu__on-pa">
+            <li class="main-menu__on-page">
               <a class="main-menu__item" href="index.html">Главная</a>
             </li>
             <li>
@@ -94,14 +97,13 @@
     </header>
     <main class="page-main">
       <div class="intro">
-        <div class="intro__image"></div>
         <div class="intro__download-block">
           <p class="intro__header">Взгляните на жизнь иначе!<p>
-          <a class="intro__download" href="#">Скачать приложение</a>
+          <a class="intro__download" href="http://www.apple.com/ru/itunes/download/">Скачать приложение</a>
           <div class="intro__intro-wrapper">
-            <div class="intro__intro-logo intro__intro-logo--apple"></div>
-            <div class="intro__intro-logo intro__intro-logo--android"></div>
-            <div class="intro__intro-logo intro__intro-logo--windows"></div>
+            <a class="intro__intro-logo intro__intro-logo--apple" href="http://www.apple.com/ru/itunes/download/">Apple</a>
+            <a class="intro__intro-logo intro__intro-logo--android" href="https://play.google.com/store/apps?hl=ru">Android</a>
+            <a class="intro__intro-logo intro__intro-logo--windows" href="https://www.microsoft.com/ru-ru/store/apps">Windows</a>
           </div>
           <p class="intro__message">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>

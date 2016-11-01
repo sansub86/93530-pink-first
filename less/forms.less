@@ -1,13 +1,16 @@
 .forms {
-  margin-bottom: 56px;
+  margin-bottom: 31px;
   min-width: 320px;
+  position: relative;
   &__competition {
     min-width: 320px;
-    display: block;
     height: 240px;
-    width: 100%;
     background: url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 0;
-    background-size: cover;
+    background-size: 100%;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url('../img/bg-back-mobile@2x.jpg') no-repeat 50% 0;
+      background-size: 100%;
+    }
   }
   &__h1 {
     font-family: "Open Sans Light", Arial, sans-serif;
@@ -49,6 +52,22 @@
       display: none;
     }
   }
+  &__h4 {
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+  &__popup-text {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 23px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 38px;
+    text-align: center;
+  }
   &__textfield {
     margin-bottom: 2px;
   }
@@ -60,19 +79,39 @@
   &__input-text {
     width: 100%;
     height: 63px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 15px;
     border: 2px solid #e5e5e5;
     box-sizing: border-box;
     border-radius: 3px;
     margin-bottom: 15px;
     margin-top: 5px;
+    &--textarea {
+      resize: none;
+      outline: none;
+      padding-top: 15px;
+      border: 2px solid #e5e5e5;
+      border-radius: 3px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 22px;
+      width: 100%;
+      height: 200px;
+      box-sizing: border-box;
+      margin-top: 18px;
+    }
     &:hover {
       border-color: #283645;
     }
     &:focus {
         border-color:#d22856;
         outline-color: #d22856;
+      }
+    &:focus + label {
+      display: none;
     }
-    }
+  }
   &__label {
     position: absolute;
     left:23px;
@@ -104,7 +143,7 @@
     &--radio {
       margin-top: 10px;
       padding-top: 36px;
-      margin-bottom: 56px;
+      margin-bottom: 58px;
     }
     &--checkbox {
       padding-top: 35px;
@@ -176,13 +215,13 @@
   &__checkbox:checked + label::after {
     border-color: #d22856;
   }
-  &__checkbox:checked + label::before {
+  &__checkbox:active + label::before {
     border-color: #d22856;
   }
   &__radio:checked + label::after {
     background-color: #d22856;
   }
-  &__radio:checked + label::before{
+  &__radio:active + label::before{
     border-color: #d22856;
   }
   &__commit {
@@ -196,27 +235,13 @@
     left: 20px;
     font-size: 18px;
   }
-  &__textarea {
-    resize: none;
-    outline: none;
-    border: 2px solid #e5e5e5;
-    border-radius: 3px;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 22px;
-    width: 100%;
-    height: 200px;
-    box-sizing: border-box;
-    margin-top: 18px;
-
-  }
   &__wrap-button {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
   }
-  &__btn-send {
+  &__btn {
     width: 280px;
     display: block;
     margin: 0 auto;
@@ -230,7 +255,6 @@
     text-transform: uppercase;
     line-height: 30px;
     color: #ffffff;
-    margin-bottom: 35px;
     &:hover {
       background-color:#1c9b5e;
       border-color: #1c9b5e;
@@ -238,7 +262,7 @@
     &:active {
       background-color:#1c9b5e;
       border-color: #1c9b5e;
-      color: #7abc98;
+      color: rgba(255, 255, 255, .3);
     }
   }
   &__required-fields {
@@ -247,6 +271,7 @@
     text-transform: uppercase;
     line-height: 30px;
     display: block;
+    margin-top: 35px;
   }
   &__star {
     color: #d22856;
@@ -254,6 +279,38 @@
   }
   &__text {
     display: none;
+  }
+  &__popup-error {
+    width: 320px;
+    height: 290px;
+    box-sizing: border-box;
+    padding: 38px 0px 0px 0px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 1168px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 5px 20px 5px #E0E0E0;
+  }
+  &__popup-send {
+    width: 320px;
+    height: 380px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 1639px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 5px 20px 5px #E0E0E0;
+  }
+  &__wrap-popup-btn {
+    background-color: #f2f2f2;
+    padding-top: 48px;
+    padding-bottom: 50px;
+    margin-top: -6px;
   }
 }
 @media @tablet-widths {
@@ -266,6 +323,11 @@
     &__competition {
       height: 440px;
       background: url('../img/bg-back-tablet@1x.jpg') no-repeat 50% 0;
+      background-size: 100%;
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url('../img/bg-back-tablet@2x.jpg') no-repeat 50% 0;
+        background-size: 100%;
+      }
     }
     &__h1 {
       display: block;
@@ -284,21 +346,32 @@
     &__h2 span {
       display: inline;
     }
+    &__h4 {
+      font-size: 30px;
+      line-height: 40px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    &__popup-text {
+      font-size: 18px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
     &__name-wrap {
       margin: 0 40px;
       padding: 0;
-      margin-top: 30px;
+      margin-top: 28px;
       margin-bottom: -28px;
     }
     &__textfield {
       display: flex;
       align-items: center;
-      margin-bottom: 53px;
+      margin-bottom: 50px;
       &--bottom {
         flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: flex-start;
-        margin-bottom: 20px;
+        margin-bottom: 28px;
       }
     }
     &__radio-items {
@@ -317,6 +390,13 @@
       margin: 0 auto;
       box-sizing: border-box;
       height: 64px;
+      &--textarea {
+        margin: 0 58px;
+        width: auto;
+        margin-top: 37px;
+        padding-bottom: 5px;
+        height: 192px;
+      }
     }
     &__input-item--telephone::after {
       content: '';
@@ -347,29 +427,30 @@
       margin: 40px;
       border: 2px solid #e5e5e5;
       background-color: #ffffff;
-      padding-bottom: 20px;
       &--checkbox {
         order: 2;
-        padding-left: 40px;
+        padding-left: 38px;
         padding-right: 40px;
         padding-bottom: 25px;
-        margin-top: 20px;
+        margin-top: 22px;
       }
       &--radio {
-        margin-top: 38px;
+        margin-top: 43px;
         padding-left: 58px;
         padding-bottom: 40px;
       }
       &--contacts {
         order: 1;
         margin-top: 24px;
-        padding: 0 60px;
+        padding-left: 58px;
+        padding-right: 60px;
         padding-top: 37px;
+        padding-bottom: 0px;
       }
       &--commit {
         padding-top: 30px;
         padding-bottom: 50px;
-        margin-top: 25px;
+        margin-top: 27px;
       }
     }
     &__checkbox-items {
@@ -407,41 +488,50 @@
       &--normal {
         display: block;
         margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 20px;
+        margin-bottom: 0px;
+        margin-left: 18px;
       }
     }
-    &__textarea {
-      margin: 0 58px;
-      width: auto;
-      margin-top: 37px;
-      padding: 0;
-      padding-bottom: 5px;
-      height: 192px;
-    }
     &__commit label {
-      top: 52px;
-      left: 80px;
+      top: 54px;
+      left: 78px;
     }
-    &__btn-send {
+    &--btn-send {
       margin: 0;
       width: 300px;
     }
     &__wrap-button {
       margin: 0 40px;
-      margin-top: 67px;
+      margin-top: 69px;
+      margin-bottom: 50px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
+    &__popup-error {
+      width: 460px;
+      height: 365px;
+      top: 906px;
+    }
+    &__popup-send {
+      width: 460px;
+      height: 430px;
+      top: 1378px;
+    }
+    &--btn-ok{
+      width: 300px;
+    }
+    &--btn-close {
+      width: 300px;
     }
   }
+}
 @media @desktop-widths {
   .forms {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     &__h1 {
       font-size: 50px;
-      margin: 0 300px;
+      margin: 0 150px;
       padding-top: 169px;
     }
     &__h2 {
@@ -451,6 +541,11 @@
     &__competition {
       height: 391px;
       background: url('../img/bg-back-desktop@1x.jpg') no-repeat 50% 0;
+      background-size: 100%;
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url('../img/bg-back-desktop@2x.jpg') no-repeat 50% 0;
+        background-size: 100%;
+      }
     }
     &__page-forms {
       display: flex;
@@ -466,6 +561,10 @@
       margin-bottom: 0px;
       margin-top: 5px;
     }
+    &__required-fields {
+      margin-top: 0px;
+      margin-bottom: -5px;
+    }
     &__textfield-header {
       &--center {
         margin-left: -75px;
@@ -474,8 +573,6 @@
         margin-left: 0;
       }
       &--checkbox {
-
-        z-index: 1;
         margin-top: -66px;
         margin-left: -10px;
       }
@@ -485,6 +582,10 @@
     }
     &__input-text {
       height: 64px;
+      &--textarea {
+        margin-top: 34px;
+        height: 128px;
+      }
     }
     &__wrap {
       margin: 0 0 65px 0;
@@ -501,6 +602,7 @@
         order: -1;
         flex-basis: 100%;
         padding-top: 33px;
+        padding-bottom: 11px;
       }
       &--checkbox {
         flex-basis: 100%;
@@ -514,6 +616,9 @@
         margin: 0 130px;
         padding-bottom: 44px;
       }
+    }
+    &__commit label {
+      top: 50px;
     }
     &__contacts-items {
       display: flex;
@@ -531,23 +636,48 @@
       box-sizing: border-box;
       margin-top: 20px;
     }
-    &__textarea {
-      margin-top: 34px;
-      height: 128px;
-    }
     &__textfield {
+      margin-bottom: 53px;
       &--bottom {
         margin-bottom: 2px;
         flex-basis: 45.7%;
       }
     }
     &__wrap-button {
-      padding-top: 65px;
+      padding-top: 62px;
       margin: 0 130px;
     }
     &__text {
       display: inline;
-
     }
+    &__popup-error {
+      top: 821px;
+    }
+    &__popup-send {
+      width: 780px;
+      height: 374px;
+      top: 1275px;
+    }
+    &__popup-send &__popup-text {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+    &__wrap-popup-btn {
+      margin: 0;
+    }
+    &--btn-close {
+      width: 460px;
+    }
+    &--btn-send {
+      margin: 0;
+    }
+  }
+}
+@keyframes cycle {
+  from {
+    color: rgba(255, 255, 255, .3);
+  }
+  to {
+    color: rgba(255, 255, 255, .7);
   }
 }
