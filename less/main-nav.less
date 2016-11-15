@@ -1,5 +1,4 @@
 .main-nav {
-  background-color: rgba(29, 38, 49, 0.7);
   position: relative;
   &--opacity {
     background-color: #283645;
@@ -7,16 +6,22 @@
   &--hide {
     display: none;
   }
-  &__burger:hover path{
+  &__burger{
+    fill: #ffffff;
+  }
+  &__burger:hover {
     fill: #d22856;
   }
-  &__burger:active path {
+  &__burger:active {
    fill: rgba(210, 40, 86, .3);
   }
-  &__cross:hover path{
+  &__cross {
+    fill: #ffffff;
+  }
+  &__cross:hover {
     fill: #d22856;
   }
-  &__cross:active path {
+  &__cross:active {
    fill: rgba(210, 40, 86, .3);
   }
   &__switch {
@@ -40,20 +45,7 @@
 @media @tablet-widths {
   .main-nav {
     box-sizing: border-box;
-    margin-bottom: -110px;
     border-bottom: none;
-    &__burger {
-      display: block;
-    }
-    &__burger:hover path{
-      fill: #d22856;
-    }
-    &__burger:active path {
-     fill: rgba(210, 40, 86, .3);
-    }
-    &__cross {
-      display: none;
-    }
     &__switch {
       top: 43px;
       right: 40px;
@@ -71,9 +63,10 @@
 
 @media @desktop-widths {
   .main-nav {
-    padding: 23px 130px 28px 130px;
+    padding: 23px 0;
+    margin: 0 auto;
+    width: 940px;
     display: flex;
-    justify-content: space-between;
     &__switch {
       display: none;
     }

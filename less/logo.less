@@ -3,7 +3,7 @@
   text-decoration: none;
   margin-left: 20px;
   padding-top: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
   width: 75px;
   height: 22px;
   &--footer {
@@ -13,32 +13,29 @@
     margin-bottom: 23px;
     margin-left: 0px;
   }
-  &__tablet, &__desktop {
+  &__footer-desktop {
+      display: none;
+  }
+  &__footer-mobile {
+    fill: #000000;
+  }
+  &__footer-mobile:hover {
+    fill: #d22856;
+  }
+  &__footer-mobile:active {
+    fill: #d22856;
+    opacity: 0.3;
+  }
+  &__header-tablet, &__header-desktop {
     display: none;
   }
-  &__footer{
-    &-desktop {
-      display: none;
-    }
-    &-mobile:hover path{
-      fill: #d22856;
-    }
-    &-mobile:active path{
-      fill: #d22856;
-      opacity: 0.3;
-    }
+  &__header-mobile {
+    fill: #ffffff;
   }
-
-  &:hover &__mobile path {
+  &:hover &__header-mobile {
    fill: #d22856;
   }
-  &:active &__mobile path {
-   fill: rgba(255, 255, 255, .3);
-  }
-  &:hover &__mobile path {
-   fill: #d22856;
-  }
-  &:active &__mobile path {
+  &:active &__header-mobile {
    fill: rgba(255, 255, 255, .3);
   }
 }
@@ -49,29 +46,20 @@
     padding-top: 26px;
     padding-bottom: 44px;
     padding-left: 40px;
-    &__mobile, &__desktop {
+    margin: 0;
+    &__header-mobile, &__header-desktop {
       display: none;
     }
-    &__tablet {
+    &__header-tablet {
       display: block;
     }
-    margin: 0;
-    &__footer-desktop {
-        display: none;
-      }
-      &__footer {
-      &-mobile:hover path{
-        fill: #d22856;
-      }
-      &-mobile:active path{
-        fill: #d22856;
-        opacity: 0.3;
-      }
+    &__header-tablet {
+      fill: #ffffff;
     }
-    &:hover &__tablet path {
+    &:hover &__header-tablet{
      fill: #d22856;
     }
-    &:active &__tablet path {
+    &:active &__header-tablet {
      fill: rgba(255, 255, 255, .3);
     }
     &--footer {
@@ -84,35 +72,33 @@
   .logo {
     margin-top: 4px;
     padding: 0;
-    &__desktop {
+    &__header-tablet, &__footer-mobile {
+      display: none;
+    }
+    &__header-desktop {
       display: block;
+    }
+    &__header-desktop {
+      fill:#ffffff;
+    }
+    &:hover &__header-desktop {
+     fill: #d22856;
+    }
+    &:active &__header-desktop {
+     fill: rgba(255, 255, 255, .3);
     }
     &--footer {
       margin-top: 10px;
     }
-    &:hover &__desktop path {
-     fill: #d22856;
+    &__footer-desktop {
+      display: inline-block;
     }
-    &:active &__desktop path {
-     fill: rgba(255, 255, 255, .3);
+    &__footer-desktop:hover {
+      fill: #d22856;
     }
-    &__tablet {
-      display: none;
-    }
-    &__footer {
-      &-mobile {
-        display: none;
-      }
-      &-desktop {
-        display: inline-block;
-      }
-      &-desktop:hover path{
-        fill: #d22856;
-      }
-      &-desktop:active path{
-        fill: #d22856;
-        opacity: 0.3;
-      }
+    &__footer-desktop:active {
+      fill: #d22856;
+      opacity: 0.3;
     }
   }
 }

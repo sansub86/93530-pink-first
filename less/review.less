@@ -1,5 +1,5 @@
 .review {
-  margin-top: 40px;
+  margin-top: 42px;
   margin-bottom: 30px;
   min-width: 320px;
    &__btn-back, &__btn-next {
@@ -80,29 +80,25 @@
       width: 22px;
       height: 42px;
       position: absolute;
+      top: 25px;
+      cursor: pointer;
     }
     &__btn-back {
-        left: 130px;
-        top: 25px;
-        cursor: pointer;
+        left: 10.98%;
       }
-    &__btn-back-icon:hover path {
-      fill:#7e868f;
-    }
-    &__btn-back-icon:active path {
-      fill:#e9ebec;
-    }
     &__btn-next {
-        right: 130px;
-        top: 25px;
-        cursor: pointer;
+        right: 10.98%;
       }
-    &__btn-next-icon:hover path {
+    &__btn-back-icon, &__btn-next-icon {
+      fill:#bec2c7;
+    }
+    &__btn-back-icon:hover, &__btn-next-icon:hover {
       fill:#7e868f;
     }
-    &__btn-next-icon:active path {
+    &__btn-back-icon:active, &__btn-next-icon:active {
       fill:#e9ebec;
     }
+
     &__slide1, &__slide2, &__slide3 {
       width:820px;
     }
