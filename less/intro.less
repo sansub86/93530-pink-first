@@ -1,0 +1,135 @@
+.intro {
+  &__image {
+    height: 430px;
+    background: url('../img/iphone-hand-mobile@1x.png') no-repeat left bottom,
+                url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
+    background-size: auto, cover;
+    margin-top: 220px;
+    min-width: 320px;
+  }
+  &__download {
+    display: block;
+    height: 55px;
+    width: 280px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+    padding: 16px 0;
+    border: 3px solid #ffffff;
+    border-radius: 55px;
+    box-sizing: border-box;
+  }
+  &__download-block {
+    min-width: 320px;
+      background: #1d2631;
+      padding-top: 27px;
+      padding-bottom: 5px;
+  }
+  &__intro-wrapper {
+    margin: 0 auto;
+    width: 220px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__intro-logo {
+    width: 60px;
+    height: 60px;
+    }
+  &__intro-logo--apple {
+    background: url('../img/logo-apple.svg') no-repeat 50% 100%;
+  }
+  &__intro-logo--android {
+    background: url('../img/logo-android.svg') no-repeat 50% 100%;
+  }
+  &__intro-logo--windows {
+    background: url('../img/logo-microsoft.svg') no-repeat 50% 100%;
+  }
+  &__message {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-size: 14px;
+    width: 280px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    padding: 25px 0;
+    margin: 0 auto;
+  }
+  &__header {
+      display: none;
+  }
+}
+@media @tablet-widths {
+  .intro {
+
+    &__image {
+      margin-top: 0;
+      height: 855px;
+      background: url('../img/iphone-hand-mobile@1x.png') no-repeat 75% bottom,
+                  url('../img/bg-back-mobile@1x.jpg') no-repeat 50% 100%;
+      background-size: 552px 645px, cover;
+    }
+    &__download-block {
+      background-color: transparent;
+      position: absolute;
+      top: 200px;
+      width: 50%;
+      padding-top: 10px;
+    }
+    &__header {
+      display: inline;
+      font-family: "Open Sans Light", Arial, sans-serif;
+      font-size: 40px;
+      line-height: 48px;
+      color: #ffffff;
+      display: block;
+      margin-left: 65px;
+      margin-right: 65px;
+      text-align: center;
+    }
+    &__download {
+      margin-top: 30px;
+      width: 300px;
+      margin-bottom: 42px;
+    }
+    &__message {
+      font-size: 18px;
+      width: auto;
+      margin: 0 10px;
+      padding-top: 37px;
+    }
+  }
+}
+@media @desktop-widths {
+  .intro {
+    &__image {
+      margin-top: 0;
+    }
+    &__header {
+      font-size: 50px;
+      line-height: 61px;
+      margin-left: 92px;
+      margin-top: 18px;
+      margin-right: 150px;
+      padding-bottom: 18px;
+    }
+    &__download {
+      margin-left: 129px;
+      font-size: 21px;
+    }
+    &__intro-wrapper {
+      margin-left: 169px;
+      margin-top: 62px;
+    }
+    &__message {
+      padding-top: 57px;
+      margin-left: 105px;
+      margin-right: 160px;
+    }
+  }
+}

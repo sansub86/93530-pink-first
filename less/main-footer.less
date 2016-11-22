@@ -1,0 +1,31 @@
+.main-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &--main-page {
+  display: none;
+  }
+
+}
+@media @tablet-widths {
+  .main-footer {
+    height: 127px;
+    box-sizing: border-box;
+    padding: 0 40px;
+    height: 130px;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+    &--main-page {
+      display: flex;
+    }
+  }
+}
+@media @desktop-widths {
+  .main-footer {
+    padding: 0 130px;
+    margin-top: 21px;
+  }
+}

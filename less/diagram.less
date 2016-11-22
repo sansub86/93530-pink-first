@@ -1,0 +1,98 @@
+.diagram {
+  display: none;
+}
+@media @tablet-widths {
+  .diagram {
+    display: block;
+    margin-left: 50%;
+    margin-top: 97px;
+    margin-bottom: 121px;
+    position: relative;
+    &__h2 {
+      font-family: "Open Sans Bold", Arial, sans-serif;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 9px;
+      margin-left: -2px;
+      text-align: left;
+      }
+    &__item {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 8px;
+      margin-left: -2px;
+      margin-right: 50px;
+    }
+    &__link {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      margin-left: -2px;
+      color: #d22856;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 240px;
+      height: 274px;
+      position: absolute;
+      background: url('../img/timer.png') no-repeat 0 0;
+      background-size: contain;
+      left: -310px;
+      top:-40px;
+    }
+    &::after {
+      content: '24';
+      display: block;
+      text-align: center;
+      font-family: "Open Sans Bold", Arial, sans-serif;
+      font-size: 96px;
+      line-height: 174px;
+      color: #d22856;
+      width: 174px;
+      height: 174px;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+      position: absolute;
+      left: -293px;
+      top:15px;
+    }
+  }
+}
+@media @desktop-widths {
+  .diagram {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding-top: 160px;
+    padding-bottom: 112px;
+    padding-left: 500px;
+    &::before {
+      left: 130px;
+      top: 65px;
+      width: 300px;
+      height: 345px;
+    }
+    &::after {
+      top: 132px;
+      left: 152px;
+      width: 220px;
+      height: 220px;
+      border: 18px solid #d22856;
+      font-size: 120px;
+      line-height: 210px;
+    }
+    &__item {
+      margin-top: 25px;
+      margin-right: 210px;
+      margin-bottom: 30px;
+    }
+    &__h2 {
+      line-height: 30px;
+    }
+    &__link, &__item {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
